@@ -1,5 +1,5 @@
 body {
-    background-color: darkgray;
+    background-color: rgb(129, 201, 175);
     font-family: Arial, sans-serif;
 }
 
@@ -114,6 +114,66 @@ button {
 }
 
 #closePopup {
+    width: 10vw;
+    margin-top: 1vw;
+    background-color: white;
+    color: black;
+    padding: 0.5vw;
+    border: 0.1vw solid gray;
+    cursor: pointer;
+}
+
+#circusAd {
+    position: absolute;
+    z-index: 3;
+    cursor: pointer;
+    right: 1vw;
+    top: 25%;
+    width: 15vw;
+    font-size: 1.5vw;
+    padding: 1vw;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    border: 0.1vw solid black;
+    box-shadow: 0 0 2vw rgba(0, 0, 0, 0.8);
+    display: none;
+}
+
+#circusContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+    align-items: center;
+    display: none;
+}
+
+#circus {
+    background-color: black;
+    color: white;
+    padding: 3vw;
+    width: 40%;
+    font-size: 2.5vw;
+    text-align: center;
+    border-radius: 1vw;
+}
+
+#circusImage {
+    width: 100%;
+    margin-top: -3vw;
+}
+
+#circusText {
+    font-size: 2vw;
+    margin-bottom: 2vw;
+}
+
+#closeCircus {
     width: 10vw;
     margin-top: 1vw;
     background-color: white;

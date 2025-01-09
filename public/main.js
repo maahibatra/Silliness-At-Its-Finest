@@ -56,8 +56,45 @@ jokeButton.addEventListener("click", function() {
 
 setTimeout(() => {
     popupContainer.style.display = "flex";
-}, 15000)
+}, 15000);
 
 closePopup.addEventListener("click", function() {
     popupContainer.style.display = "none";
-})
+});
+
+setTimeout(() => {
+    circusAd.style.display = "block";
+}, 20000);
+
+circusAd.addEventListener("click", function() {
+    circusContainer.style.display = "flex";
+});
+
+const performance = [
+    "       🎩",
+    "       🎩  🪄",
+    " 💨 💨 🎩 💨 🪄 💨",
+    "   💨  🎩  🪄 💨💨",
+    "  💨💨 🎩  🪄 🕊️💨",
+    "   ✨  🎩  🪄 🕊️✨",
+    "       🎩 🕊️ 🪄",
+    "    🕊️ 🎩  🪄",
+    "      💨💨",
+    "       the end. (click on tent to replay)"
+]
+
+circusImage.addEventListener("click", function() {
+    circusText.style.fontSize = "5vw";
+    for(let i = 0; i < performance.length; i++) {
+        setTimeout(() => {
+            circusText.textContent = performance[i];
+            if(i === performance.length - 1) {
+                circusText.style.fontSize = "2vw";
+            }
+        }, i * 1000);
+    }
+});
+
+closeCircus.addEventListener("click", function() {
+    circusContainer.style.display = "none";
+});
