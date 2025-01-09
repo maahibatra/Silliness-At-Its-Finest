@@ -1,3 +1,28 @@
+let sparkleTimeout = false;
+
+document.addEventListener("mousemove", (e) => {
+    if(!sparkleTimeout) {
+        const star = document.createElement("div");
+        star.textContent = "✨";
+        star.style.fontSize = "3vw";
+        star.style.position = "absolute";
+        star.style.left = e.pageX + "px";
+        star.style.top = e.pageY + "px";
+        star.style.pointerEvents = "none";
+        star.style.animation = "fade 1s linear";
+        document.body.appendChild(star);
+
+        setTimeout(() => {
+            star.remove();
+        }, 1000);
+
+        sparkleTimeout = true;
+        setTimeout(() => {
+            sparkleTimeout = false;
+        }, 50)
+    }
+});
+
 chickenContainer.addEventListener("mouseover", function() {
     const mooSound = new Audio("moo.mp3");
     mooSound.play();

@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(129, 201, 175);
+    background-color: rgb(129, 191, 201);
     font-family: Arial, sans-serif;
 }
 
@@ -181,6 +181,17 @@ button {
     padding: 0.5vw;
     border: 0.1vw solid gray;
     cursor: pointer;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
 }
 
 @keyframes shake {
