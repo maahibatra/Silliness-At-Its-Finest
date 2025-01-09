@@ -1,39 +1,16 @@
 body {
     background-color: darkgray;
+    font-family: Arial, sans-serif;
 }
 
-#uselessButtonContainer {
-    position: absolute;
-    width: 80%;
-    height: 80%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    overflow: visible;
-}
-
-#uselessButton {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: red;
-    color: white;
-    font-size: 2vw;
-    padding: 1vw;
-    border: 0.1vw solid black;
-    border-radius: 50%;
-    width: 10vw;
-    height: 10vw;
-    box-shadow: 0 0 2vw rgba(0, 0, 0, 0.8);
-    cursor: pointer;
-    animation: shake 0.5s infinite;
+button {
+    font-family: Arial, sans-serif;
 }
 
 #chickenContainer {
     position: absolute;
     top: 65%;
-    left: 4%;
+    left: 3%;
     transition: transform 0.3s ease;
 }
 
@@ -49,6 +26,103 @@ body {
     animation: bounce 1s infinite;
 }
 
+#uselessButtonContainer {
+    position: absolute;
+    width: 80%;
+    height: 67%;
+    top: 45%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    overflow: visible;
+}
+
+#uselessButton {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    background-color: red;
+    color: white;
+    font-size: 2vw;
+    padding: 1vw;
+    border: 0.1vw solid black;
+    border-radius: 50%;
+    width: 10vw;
+    height: 10vw;
+    box-shadow: 0 0 2vw rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+    animation: shake 0.5s infinite, backgroundColor 3s infinite;
+}
+
+#uselessButtonTextContainer {
+    position: absolute;
+    bottom: 2vw;
+    right: 3vw;
+    font-size: 3vw;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 2vw;
+}
+
+#jokeButtonContainer {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1vw;
+}
+
+#jokeButton {
+    background-color: black;
+    color: white;
+    border: 0.1vw solid black;
+    box-shadow: 0 0 1vw rgba(0, 0, 0, 0.8);
+    padding: 1vw;
+    cursor: pointer;
+    animation: backgroundColor 1.5s infinite;
+}
+
+#jokeButtonText {
+    visibility: hidden;
+    font-size: 2vw;
+    margin-top: 1vh;
+    color: white;
+}
+
+#popupContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+    align-items: center;
+    display: none;
+}
+
+#popup {
+    width: 40%;
+    font-size: 2.5vw;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 3vw;
+    border-radius: 1vw;
+}
+
+#closePopup {
+    width: 10vw;
+    margin-top: 1vw;
+    background-color: white;
+    color: black;
+    padding: 0.5vw;
+    border: 0.1vw solid gray;
+    cursor: pointer;
+}
+
 @keyframes shake {
     0%, 100% {
         transform: translate(0, 0);
@@ -61,6 +135,27 @@ body {
     }
     75% {
         transform: translate(-12px, 10px) rotate(-5deg);
+    }
+}
+
+@keyframes backgroundColor {
+    0% {
+        background-color: red;
+    }
+    20% {
+        background-color: purple;
+    }
+    40% {
+        background-color: green;
+    }
+    60% {
+        background-color: blue;
+    }
+    80% {
+        background-color: orange;
+    }
+    100% {
+        background-color: red;
     }
 }
 
